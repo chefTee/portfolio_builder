@@ -33,6 +33,7 @@ body{
     --baby-pink: rgba(244, 159, 175, 1);
 }
 .hero{
+    z-index: 20;
     position: fixed;
     width: 100%;
     background-color: var(--white);
@@ -134,7 +135,6 @@ nav .contact-button:hover{
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    background-image: ;
 }
 .about-page .about-image-conatiner{
     position: relative;
@@ -188,8 +188,225 @@ nav .contact-button:hover{
     grid-template-columns: repeat(2, 1fr) ;
 }
 .templates-container .template{
+    z-index: 10;
+    position: relative;
     width: 500px;
     height: 300px;
     background-color: var(--baby-pink);
     border-radius: 15px;
+}
+.template-buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 1rem;
+}
+.template-buttons.hide{
+    display: none;
+}
+.template-buttons a{
+    font-size: 20px;
+    color: white;
+    background-color: var(--deep-pink);
+    padding: 10px 20px;
+    border-radius: 666px;
+}
+
+
+/* COMPANY-PAGE-SECTION*/
+.company{
+    padding: 3rem 2rem;
+    width: 100%;
+    background-color: var(--light-pink);
+} 
+.company .company-title-container{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--baby-pink);
+
+}
+.company-title-container .title-container{
+    width: 70px;
+    border: 3px solid var(--baby-pink);
+    border-radius: 666px;
+    padding: .2rem 0;
+}
+.title-container .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.company-team-container{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.company-team-container .team{
+    max-width: 45%;
+    padding-bottom: 2rem;
+}
+.team img{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+.team .name-container{
+    width: max-content;
+    border:  1px solid var(--baby-pink);
+    padding: .5rem;
+    border-radius: 666px;
+    margin-bottom: 1rem;
+}
+.team .name-container .name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.team .role{
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: .5rem;
+    border-bottom: 4px solid var(--baby-pink);
+}
+.team .company-vision-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+}
+.company-vision-container .vision{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 25px;
+    text-align: center;
+    line-height: 2rem;
+}
+
+/* CONTACT-PAGE-SECTION */
+.contact{
+    width: 100%;
+    padding: 3rem 2rem;
+}
+.contact .contact-page-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact-page-title h2{
+    font-size: 35px;
+}
+.contact .contact-page-summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact-page-summary p{
+    font-size: 20px;
+}
+.contact .contact-page-form{
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-page-form form{
+    width: 100%;
+}
+.contact  .contact-page-form .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.form label{
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+.form input,
+.form textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    resize: none;
+}
+textarea{
+    margin-top: .2rem;
+}
+textarea::placeholder{
+    color: var(--black);
+}
+.form input:focus,
+.form textarea:focus{
+    outline: none;
+}
+.button{
+    width: 100%;
+    margin: 0 auto;
+}
+.button button{
+    width: 100%;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--deep-pink);
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+}
+.button button:hover{
+    opacity: .8;
+}
+
+/* FOOTER-SECTION */
+footer{
+    width: 100%;
+    background-color: var(--deep-pink);
+    display: flex;
+    justify-content: right;
+    padding-block: 1rem;
+    padding-right: 2rem;
+    align-items: center;
+    gap: 6rem;
+    color: var(--white);
+}
+.category-section .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.category-section ul{
+    display: flex;
+    gap: 1rem;
+}
+.category-section ul li a{
+    font-size: 18px;
+    color: var(--white);
+}
+.category-section ul li:hover{
+    transform: scale(1.05);
+}
+.social-section .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.social-section ul{
+    display: flex;
+    gap: 1rem;
+}
+.social-section ul li a{
+    font-size: 18px;
+    color: var(--white);
+}
+.social-section ul li:hover{
+    transform: scale(1.05);
 }
