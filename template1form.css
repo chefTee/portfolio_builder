@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,93 @@
     box-sizing: border-box;
     list-style-type: none;
 }
+.hide{
+    display: none;
+}
+input,
+button,
+select,
+textarea{
+    font: inherit;
+}
+body{
+    height: 100vh;
+    max-width: 100%;
+    background-color: #80CABC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form{
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form h1{
+    text-transform: uppercase;
+    color: #80CABC;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+form input{
+    margin-bottom: .5rem;
+    border: 1px solid #80CABC;
+    border-radius: 5px;
+    padding: 10px;
+}
+form textarea{
+    resize: none;
+    range: 10;
+    margin-bottom: .5rem;
+    border: 1px solid #80CABC;
+    border-radius: 5px;
+    padding: 10px;
+}
+form input:focus,
+form textarea:focus{
+    border: none;
+    outline: 2px solid #07866f;
+}
+form button{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #80CABC;
+    border: none;
+    border-radius: 5px;
+}
+form button:hover{
+    background-color: #07866f;
+}
+.download-btn{
+    color: #80CABC;
+    margin: 2% auto;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.download-btn:hover{
+    color: #07866f;
+}
+.porfolio-container.hide{
+    display: none;
+}
 .porfolio-container{
+    font-family: "Roboto Slab", serif;
     max-width: 850px;
     margin: 0 auto;
     padding: 1rem;
@@ -17,43 +104,88 @@
 }
 
 header{
+    max-height: 200px;
     display: flex;
     color: #80CABC;
 }
 header .image{
     width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
 }
 header .intro{
     width: 70%;
+    font-size: 18px;
     color: #000;
     background-color: #80CABC;
-    padding: 10px;
+    padding: 1rem;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 header .intro .name{
-    color: red;
-    margin-bottom: 2%;
+    font-size: 25px;
+    font-weight: bolder;
 }
-header .intro .role{
-    color: yellow;
-    margin-bottom: 2%;
+header .intro .role span{
+    font-size: 25px;
+    font-weight: bolder;
 }
 header .intro .summary{
-    color: palevioletred;
-    margin-bottom: 2%;
+    width: 65%;
+    line-height: 1.6rem;
 }
 
-/* section{
+section{
+    margin-block: 1%;
     color: black;
     background-color: #80CABC;
     width: 100%;
     padding: 5rem;
-    text-align: center;
+    padding-block: 1rem;
 }
-section h1{
+section h2{
+    text-align: center;
     font-size: 1.5em;
     font-weight: bolder;
+    margin-bottom: 2%;
 }
 section p{
-    font-size: .5em;
+    line-height: 2rem;
+    font-size: 20px;
     font-weight: normal;
-} */
+} 
+
+.expsection{
+    margin-block: 1%;
+    color: black;
+    background-color: #80CABC;
+    width: 100%;
+    padding: 5rem;
+    padding-block: 1rem;
+}
+.expsection h2{
+    text-align: center;
+}
+.expsection p{
+    line-height: 2rem;
+    font-size: 20px;
+    font-weight: normal;
+}
+.contact{
+    background-color: #80CABC;
+    padding: 5rem;
+    padding-block: 1rem;
+}
+.contact h3{
+    text-align: center;
+}
+.contact .details{
+display: flex;
+}
+.contact .details .details-title{
+    
+}

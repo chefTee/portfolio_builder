@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template 1</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script  defer src="./template1form.js"></script>
     <link rel="stylesheet" href="./template1form.css">
 </head>
 <body>
     <form action="" id="template1form" class="template1form">
+        <h1>Portfolio Form</h1>
 
-        <label for="profileImage">Profile Image</label>
-        <input name="profileImage" type="file" id="profileImageInput" accept="image*/" required><br><br>
+        <div class="profileImage">
+            <label for="profileImage">Profile Image:</label> <br>
+            <input name="profileImage" type="file" id="profileImageInput" accept="image*/" required><br>
+        </div>
 
-        <label for="name">Name:</label><br>
-        <input name="name" type="text" id="name" required><br><br>
+        <label for="name">Name:</label>
+        <input name="name" type="text" id="name" required>
 
-        <label for="role">Role:</label><br>
-        <input name="role" type="text" id="role" required><br><br>
+        <label for="role">Role:</label>
+        <input name="role" type="text" id="role" required>
 
-        <label for="about">Short Summary Of Your Role:</label><br>
-        <textarea name="aboutRole" id="aboutRole" required></textarea><br><br>
+        <label for="about">Short Summary Of Your Role:</label>
+        <textarea name="aboutRole" id="aboutRole" required></textarea>
 
-        <!-- <label for="about">Summary About You:</label><br>
-        <textarea name="aboutYou" id="aboutYou" required></textarea><br><br>
+        <label for="about">Summary About You:</label>
+        <textarea name="aboutYou" id="aboutYou" required></textarea>
 
-        <label for="about">Summary About Your Experiences:</label><br>
-        <textarea name="aboutExperiences" id="aboutExperiences" required></textarea><br><br>
+       <label for="about">Summary About Your Experiences:</label>
+        <textarea name="aboutExperiences" id="aboutExperiences" required></textarea>
 
-        <label for="skills">Skills:</label><br>
-        <textarea name="skills" id="skills" required></textarea><br><br>
+        <!-- <label for="skills">Skills:</label>
+        <textarea name="skills" id="skills" required></textarea> -->
 
-        <label for="phone">PhoneNumber:</label><br>
-        <input name="phone" type="tel" id="phone" required><br><br>
+        <label for="phone">PhoneNumber:</label>
+        <input name="phone" type="tel" id="phone" required>
 
-        <label for="email">Email:</label><br>
-        <input name="email" type="email" id="email" required><br><br> -->
+        <label for="email">Email:</label>
+        <input name="email" type="email" id="email" required>
 
-        <button type="submit">Generate Portfolio</button>
+        <button type="submit" id="">Generate Portfolio</button>
 
 </form>
 <!-- TEMPLATE FOR PORTFOLIO PDF PREVIEW -->
-<div class="porfolio-container" id="portfolioPreview"></div>
+<div class="porfolio-container hide" id="portfolioPreview"></div>
+<button id="downloadButton" class="download-btn hide">Download PDF</button>
 </body>
+<script src="./template1form.js"></script>
 </html>

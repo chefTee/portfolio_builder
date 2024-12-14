@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('template1form');
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
-
+    const downloadButton = document.getElementById('downloadButton')
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-
+        portfolioPreview.classList.remove('hide');
     //Collecting data from the form
         const formData = new FormData(form);
         const imageFile = formData.get('profileImage');
@@ -31,11 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //Generate the portfolio preview
         generatePortfolioPreview(data, imageFile);
+
+
     });
 
     function generatePortfolioPreview(data, imageFile) {
-        //why is this line not working or how do  i set the genrated portfolio to load or open on a new page
         form.classList.add("hide");
+        downloadButton.classList.remove('hide');
         //Clearing the previous preview and ensuring a clean state for the next preview
         portfolioPreview.innerHTML = '';
 
@@ -46,11 +48,49 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src=""class="image" alt="Profile Image">
         <div class="intro">
             <p class="name">${data.name}</p>
-            <p class="role">Hello world, I am a <strong>${data.role}</strong></p>
+            <p class="role">Hello world, I am a <span>${data.role}</span></p>
             <p class="summary">${data.aboutRole}</p>
         </div>
         `;
         portfolioPreview.appendChild(header);
+
+        const about = document.createElement('section');
+        about.className = 'about';
+        about.innerHTML = `
+        <h2>About Me</h2>
+        <p class="about-summary">${data.aboutYou}</p>
+        `;
+        portfolioPreview.appendChild(about);
+
+        const exp = document.createElement('div');
+        exp.className = "expsection";
+        exp.innerHTML = `
+        <h2>Experiences</h2>
+        <p>${data.aboutExperiences}</p>
+        `;
+
+        portfolioPreview.appendChild(exp);
+
+        const contact = document.createElement('div');
+        contact.className = "contact";
+        contact. innerHTML = `
+            <h3>Let's Talk</h3>
+            <div class="details">
+            <div>
+            <h3>Phone:</h3>
+            <p>${data.phone}</p>
+            </div>
+
+            <div>
+            <h3>Email:</h3>
+            <p>${data.email}</p>
+            </div>
+            </div>
+
+        `;
+
+        portfolioPreview.appendChild(contact);
+
 
         //Uploading the image
         if(imageFile && imageFile.size > 0) {
@@ -65,25 +105,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    //function generatePDFWithjsPDF(formData) {
+    //coverting the html to pdf
+    async function generatePDF(data){
         const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-    
-        // Add content to PDF
-        Object.entries(formData).forEach(([key, value], index) => {
-            doc.text(`${key}: ${value}`, 20, 10 + (index * 10));
-        });
-    
-        doc.save('form-details.pdf');
-    
+        const doc = new jsPDF('p', 'pt', 'a4');
+        //while the document is downloading
+        const portfolio = document.getElementById('portfolioPreview');
 
-    // function printPDF() {
-    //     window.print();
-    // }
+        try{
+            //Waiting for the profile image to load
+            await new Promise((resolve, reject) => {
+                const image = document.querySelector('.image')
+                if (image.complete) {
+                    resolve();
+                } else{
+                    image.onload = resolve;
+                    image.onerror = reject;
+                }
+            });
 
-    // const printButton = document.createElement('button');
-    // printButton.textContent = 'Print/Save PDF';
-    // printButton.addEventListener('click', printPDF);
-    // document.body.appendChild(printButton);
+            const canvas = await html2canvas(portfolio, {
+                allowTaint: true,
+                useCORS: true,
+                scale: 2,
+                logging: false //for a clean console
+            });
+
+            //Coverting image to pdf
+            doc.addImage(
+                canvas.toDataURL('image/png'),//convertng image to 64bit
+                'PNG', //setting image type
+                5,
+                5,
+                585,
+                250
+            );
+
+            doc.save(`${data.name}.pdf`);
+
+        } catch (error) {
+            console.error('Error generating porfolio PDF:', error);
+            alert('Failed to generate PDF. Please try again.')
+        }
+
+
+    }
+
+
+    downloadButton.addEventListener('click', () => {
+        // Collecting form data again when the download button is clicked
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        // Trigger the PDF generation function
+        generatePDF(data);
+    });
 
 })
