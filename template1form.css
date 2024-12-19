@@ -16,7 +16,7 @@ textarea{
     font: inherit;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     background-color: #80CABC;
     display: flex;
@@ -29,7 +29,7 @@ form{
     border-radius: 1rem;
     width: 50%;
     margin: 0 auto;
-    margin-top: 15rem;
+    margin-top: 2rem;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -185,7 +185,8 @@ section p{
 }
 .contact .details{
 display: flex;
+justify-content: space-between;
 }
-.contact .details .details-title{
-    
+.contact .details .contactTitle{
+    font-weight: bold;
 }

@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Let's Talk</h3>
             <div class="details">
             <div>
-            <h3>Phone:</h3>
+            <p class="contactTitle">Phone:</p>
             <p>${data.phone}</p>
             </div>
 
             <div>
-            <h3>Email:</h3>
+            <p class="contactTitle">Email:</p>
             <p>${data.email}</p>
             </div>
             </div>
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 5,
                 5,
                 585,
-                250
+                400
             );
 
             doc.save(`${data.name}.pdf`);
