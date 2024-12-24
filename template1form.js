@@ -127,18 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const canvas = await html2canvas(portfolio, {
                 allowTaint: true,
                 useCORS: true,
-                scale: 2,
+                scale: 4,
                 logging: false //for a clean console
             });
 
             //Coverting image to pdf
             doc.addImage(
-                canvas.toDataURL('image/png'),//convertng image to 64bit
+                canvas.toDataURL('image/png'),//converting image to 64bit
                 'PNG', //setting image type
                 5,
                 5,
                 585,
-                400
+                500
             );
 
             doc.save(`${data.name}.pdf`);
