@@ -62,6 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         portfolioPreview.appendChild(about);
 
+        const skill = document.createElement('div');
+        skill.className = "skillsection";
+        skill.innerHTML = `
+        <h2>Skill</h2>
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+        `
+
         const exp = document.createElement('div');
         exp.className = "expsection";
         exp.innerHTML = `
