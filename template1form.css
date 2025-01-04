@@ -114,6 +114,9 @@ header .image{
     align-items: center;
     justify-content: center;
     object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+
+
 }
 header .intro{
     width: 70%;
@@ -125,6 +128,7 @@ header .intro{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0px 20px 20px 0px;
 }
 header .intro .name{
     font-size: 25px;
@@ -146,6 +150,8 @@ section{
     width: 100%;
     padding: 5rem;
     padding-block: 1rem;
+    border-radius: 20px;
+
 }
 section h2{
     text-align: center;
@@ -158,6 +164,11 @@ section p{
     font-size: 20px;
     font-weight: normal;
 } 
+.skill-section ul li{
+    font-size: 20px;
+    line-height: 2rem;
+    list-style-type: disc;
+}
 
 .expsection{
     margin-block: 1%;
@@ -166,9 +177,11 @@ section p{
     width: 100%;
     padding: 5rem;
     padding-block: 1rem;
+    border-radius: 20px;
 }
 .expsection h2{
     text-align: center;
+    margin-bottom: 2%;
 }
 .expsection p{
     line-height: 2rem;
@@ -176,6 +189,7 @@ section p{
     font-weight: normal;
 }
 .contact{
+    border-radius: 20px;
     background-color: #80CABC;
     padding: 5rem;
     padding-block: 1rem;
@@ -184,8 +198,8 @@ section p{
     text-align: center;
 }
 .contact .details{
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .contact .details .contactTitle{
     font-weight: bold;

@@ -54,40 +54,43 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         portfolioPreview.appendChild(header);
 
+        //Creating the about section
         const about = document.createElement('section');
         about.className = 'about';
         about.innerHTML = `
-        <h2>About Me</h2>
+        <h2>ABOUT ME</h2>
         <p class="about-summary">${data.aboutYou}</p>
         `;
         portfolioPreview.appendChild(about);
 
-        const skill = document.createElement('div');
-        skill.className = "skillsection";
-        skill.innerHTML = `
-        <h2>Skill</h2>
+        //Creating the skills section
+        const skills = document.createElement('section');
+        skills.className = 'skill-section';
+        skills.innerHTML = `
+        <h2>SKILLS</h2>
         <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>${data.skill1}</li>
+        <li>${data.skill2}</li>
+        <li>${data.skill3}</li>
+        <li>${data.skill4}</li>
+        <li>${data.skill5}</li>
         </ul>
-        `
-
+        `;
+        portfolioPreview.appendChild(skills);
+        //Creating the experience section
         const exp = document.createElement('div');
         exp.className = "expsection";
         exp.innerHTML = `
-        <h2>Experiences</h2>
+        <h2>EXPERIENCES</h2>
         <p>${data.aboutExperiences}</p>
         `;
-
         portfolioPreview.appendChild(exp);
 
+        //Creating the contact section
         const contact = document.createElement('div');
         contact.className = "contact";
         contact. innerHTML = `
-            <h3>Let's Talk</h3>
+            <h3>LET'S TALK</h3>
             <div class="details">
             <div>
             <p class="contactTitle">Phone:</p>
@@ -150,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'PNG', //setting image type
                 5,
                 5,
-                585,
-                500
+                590,
+                650
             );
 
             doc.save(`${data.name}.pdf`);
