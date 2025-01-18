@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 3</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./template3form.css">
+</head>
+<body>
+    <form action="" id="template3form" class="template3form">
+        <h1>Portfolio Form</h1>
+
+        <div class="profileImage">
+            <label for="profileImage">Profile Image:</label> <br>
+            <input name="profileImage" type="file" id="profileImageInput" accept="image*/" required><br>
+        </div>
+
+        <label for="firstname">Firstname:</label>
+        <input name="firstname" type="text" id="firstname" required>
+
+        <label for="lastname">LastName:</label>
+        <input name="lastname" type="text" id="lastname" required>
+
+        <label for="role">Role:</label>
+        <input name="role" type="text" id="role" required>
+
+        <label for="about">Summary About Your Role:</label>
+        <textarea name="aboutYou" id="aboutYou" minlength="" maxlength="" required></textarea>
+
+        <label for="about">Summary About Your Experiences:</label>
+        <textarea name="aboutExperiences" id="aboutExperiences" minlength="" maxlength="" required></textarea>
+
+        <h2>Experience 1</h2>
+        <label for="">Start Date/Year:</label>
+        <input name="" type="number" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">End Date/Year:</label>
+        <input name="" type="num" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">Job Role:</label>
+        <input name="" type="text" id="" required>
+
+        <label for="">Role experience summary:</label>
+        <textarea name="" id="" minlength="" maxlength="" required></textarea>
+
+        <h2>Experience 2</h2>
+        <label for="">Start Date/Year:</label>
+        <input name="" type="number" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">End Date/Year:</label>
+        <input name="" type="num" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">Job Role:</label>
+        <input name="" type="text" id="" required>
+
+        <label for="">Role experience summary:</label>
+        <textarea name="" id="" minlength="" maxlength="" required></textarea>
+
+        <h2>Experience 3</h2>
+        <label for="">Start Date/Year:</label>
+        <input name="" type="number" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">End Date/Year:</label>
+        <input name="" type="num" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+
+        <label for="">Job Role:</label>
+        <input name="" type="text" id="" required>
+
+        <label for="">Role experience summary:</label>
+        <textarea name="" id="" minlength="" maxlength="" required></textarea>
+
+
+        <label for="email">Email:</label>
+        <input name="email" type="email" id="email" required>
+
+        <label for="phone">PhoneNumber:</label>
+        <input name="phone" type="tel" id="phone" required>
+
+        <button type="submit" id="">Generate Portfolio</button>
+
+</form>
+<!-- TEMPLATE FOR PORTFOLIO PDF PREVIEW -->
+<div class="porfolio-container hide" id="portfolioPreview"></div>
+<button id="downloadButton" class="download-btn hide">Download PDF</button>
+</body>
+<script src="./template3form.js"></script>
+</html>

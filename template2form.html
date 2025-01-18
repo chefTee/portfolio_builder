@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 2</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./template2form.css">
+</head>
+<body>
+    <form action="" id="template2form" class="template2form">
+        <h1>Portfolio Form</h1>
+
+        <div class="profileImage">
+            <label for="profileImage">Profile Image:</label> <br>
+            <input name="profileImage" type="file" id="profileImageInput" accept="image*/" required><br>
+        </div>
+
+        <label for="firstname">Firstname:</label>
+        <input name="firstname" type="text" id="firstname" required>
+
+        <label for="lastname">LastName:</label>
+        <input name="lastname" type="text" id="lastname" required>
+
+        <label for="role">Role:</label>
+        <input name="role" type="text" id="role" required>
+
+        <label for="about">Summary About You:</label>
+        <textarea name="aboutYou" id="aboutYou" minlength="" maxlength="" required></textarea>
+
+       <label for="about">Summary About Your Experiences:</label>
+        <textarea name="aboutExperiences" id="aboutExperiences" minlength="" maxlength="" required></textarea>
+
+        <label for="age">Age:</label>
+        <input name="age" type="num" id="age" required>
+
+        <label for="education">Highest form of education:</label>
+        <input name="education" type="text" id="education" required>
+
+        <label for="phone">PhoneNumber:</label>
+        <input name="phone" type="tel" id="phone" required>
+
+        <label for="email">Email:</label>
+        <input name="email" type="email" id="email" required>
+
+        <label for="country">Country:</label>
+        <input name="country" type="text" id="country" required>
+
+        <label for="expnum">Total years of experience:</label>
+        <input name="expnum" type="num" id="expnum" required>
+
+        <label for="clientnum">Total no of clients:</label>
+        <input name="clientnum" type="num" id="clientnum" required>
+
+        <label for="projnum">Total no of projects:</label>
+        <input name="projnum" type="num" id="projnum" required>
+
+        <button type="submit" id="">Generate Portfolio</button>
+
+</form>
+<!-- TEMPLATE FOR PORTFOLIO PDF PREVIEW -->
+<div class="porfolio-container hide" id="portfolioPreview"></div>
+<button id="downloadButton" class="download-btn hide">Download PDF</button>
+</body>
+<script src="./template2form.js"></script>
+</html>

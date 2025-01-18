@@ -28,9 +28,9 @@ body{
 :root{
     --white: rgba(255, 255, 255, 1);
     --black: rgba(0, 0, 0, 1);
-    --deep-pink: rgba(200, 46, 93, 1);
-    --light-pink: rgba(254, 245, 247, 1);
-    --baby-pink: rgba(244, 159, 175, 1);
+    --deep-blue: #3B5785;
+    --grey-blue: #3B578536;
+    --royal-blue: #007BE5;
 }
 .hero{
     z-index: 20;
@@ -38,7 +38,7 @@ body{
     width: 100%;
     background-color: var(--white);
     padding-right: 2rem;
-    box-shadow: 0px 1px 5px var(--deep-pink);
+    box-shadow: 0px 1px 5px var(--deep-blue);
 }
 .hero nav{
     display: flex;
@@ -48,8 +48,9 @@ body{
 nav .logo{
     max-width: 80px;
 }
-nav .logo img{
-    width: 100%;
+nav .logo P{
+    color: var(--deep-blue);
+    font-size: 50px;
 }
 nav .menu ul{
     display: flex;
@@ -65,12 +66,12 @@ nav .menu ul li:hover{
 }
 nav .menu ul li a:hover{
     transition: color 0.3s;
-    color: var(--deep-pink);
+    color: var(--deep-blue);
 }
 nav .contact-button a{
     font-size: 20px;
     color: var(--white);
-    background-color: var(--deep-pink);
+    background-color: var(--deep-blue);
     padding: 4px 1rem;
     border-radius: 5px;
 }
@@ -87,8 +88,8 @@ nav .contact-button:hover{
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: var(--light-pink);
-    background-image: url(./images/Frame\ 427318171.jpg);
+    background-color: var(--grey-blue);
+    background-image: url(./images/Group\ 1000001790\ \(1\).jpg);
     background-repeat: no-repeat;
     background-position: 100% 20%;
 }
@@ -107,7 +108,7 @@ nav .contact-button:hover{
     margin-bottom: .4rem;
 }
 .home-page-content .main-title span{
-    color: var(--deep-pink);
+    color: var(--deep-blue);
 }
 .home-page-content .summary{
     font-size: 20px;
@@ -118,7 +119,7 @@ nav .contact-button:hover{
 .home-page-content .generate-button{
     font-size: 20px;
     color: var(--white);
-    background-color: var(--deep-pink);
+    background-color: var(--deep-blue);
     padding: 10px 15px;
     border-radius: 5px;
     transition: ease-in-out 0.3s;
@@ -168,7 +169,7 @@ nav .contact-button:hover{
     align-items: center;
     justify-content: center;
     padding: 3rem;
-    background-color: var(--light-pink);
+    background-color: var(--grey-blue);
 }
 .template-page .title-container{
     width: 100%;
@@ -192,7 +193,7 @@ nav .contact-button:hover{
     position: relative;
     width: 500px;
     max-height: 300px;
-    background-color: var(--baby-pink);
+    background-color: var(--royal-blue);
     border-radius: 15px;
 }
 .template img{
@@ -209,7 +210,7 @@ nav .contact-button:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 1rem;
-    background-color: var(--baby-pink);
+    background-color: #7bb8ed;
     width: 100%;
     height: 100%;
     border-radius: 15px;
@@ -220,7 +221,7 @@ nav .contact-button:hover{
 .template-buttons a{
     font-size: 20px;
     color: white;
-    background-color: var(--deep-pink);
+    background-color: var(--deep-blue);
     padding: 10px 20px;
     border-radius: 666px;
     max-width: fit-content;
@@ -231,18 +232,18 @@ nav .contact-button:hover{
 .company{
     padding: 3rem 2rem;
     width: 100%;
-    background-color: var(--light-pink);
+    background-color: var(--grey-blue);
 } 
 .company .company-title-container{
     display: flex;
     gap: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 3px solid var(--baby-pink);
+    border-bottom: 3px solid var(--royal-blue);
 
 }
 .company-title-container .title-container{
     width: 70px;
-    border: 3px solid var(--baby-pink);
+    border: 3px solid var(--royal-blue);
     border-radius: 666px;
     padding: .2rem 0;
 }
@@ -267,7 +268,7 @@ nav .contact-button:hover{
 }
 .team .name-container{
     width: max-content;
-    border:  1px solid var(--baby-pink);
+    border:  1px solid var(--royal-blue);
     padding: .5rem;
     border-radius: 666px;
     margin-bottom: 1rem;
@@ -281,7 +282,7 @@ nav .contact-button:hover{
     font-size: 20px;
     font-weight: 400;
     padding-bottom: .5rem;
-    border-bottom: 4px solid var(--baby-pink);
+    border-bottom: 4px solid var(--royal-blue);
 }
 .team .company-vision-container{
     width: 100%;
@@ -368,7 +369,7 @@ textarea::placeholder{
     width: 100%;
     font-size: 20px;
     color: var(--white);
-    background-color: var(--deep-pink);
+    background-color: var(--deep-blue);
     border: none;
     padding: 1rem 4rem;
     border-radius: 5px;
@@ -380,7 +381,7 @@ textarea::placeholder{
 /* FOOTER-SECTION */
 footer{
     width: 100%;
-    background-color: var(--deep-pink);
+    background-color: var(--deep-blue);
     display: flex;
     justify-content: right;
     padding-block: 1rem;

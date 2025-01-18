@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+.hide{
+    display: none;
+}
+input,
+button,
+select,
+textarea{
+    font: inherit;
+}
+:root{
+    --white:#FFFFFF;
+    --blue: #E1F4F6;
+    --black: #000000;
+}
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    background-color:  #E1F4F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form{
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    border:2px solid #91dfe8;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form h1{
+    text-transform: uppercase;
+    color: #91dfe8;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+form input{
+    margin-bottom: .5rem;
+    border: 1px solid #91dfe8;
+    border-radius: 5px;
+    padding: 10px;
+}
+form textarea{
+    resize: none;
+    range: 10;
+    margin-bottom: .5rem;
+    border: 1px solid #91dfe8;
+    border-radius: 5px;
+    padding: 10px;
+}
+form input:focus,
+form textarea:focus{
+    border: none;
+    outline: 2px solid #76d8e3;
+}
+form button{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #91dfe8;
+    border: none;
+    border-radius: 5px;
+}
+form button:hover{
+    background-color: #76d8e3;
+}
+.download-btn{
+    color: #91dfe8;
+    margin: 2% auto;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.download-btn:hover{
+    color: #76d8e3;
+}
+.porfolio-container.hide{
+    display: none;
+}
+.porfolio-container{
+    font-family: "Roboto Slab", serif;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #bfe6ea;
+    box-shadow: 0 0 15px var(--blue);
+}
+.template3form.hide{
+    display: none;
+}
+
