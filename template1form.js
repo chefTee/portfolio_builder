@@ -1,13 +1,15 @@
+//Initial setup and event listeners
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('template1form');
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
     const downloadButton = document.getElementById('downloadButton')
+
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (file){
-            const reader = new FileReader();
+            const reader = new FileReader(); //the use of filreader to convert the image to a base64 URL
             reader.onload = (event) => {
                 const previewImage = document.querySelector('#portfolioPreview.image');
                 if (previewImage) {
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-
+//Form Submission Handler
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    //Portfolio preview generation
     function generatePortfolioPreview(data, imageFile) {
         form.classList.add("hide");
         downloadButton.classList.remove('hide');
@@ -139,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     image.onerror = reject;
                 }
             });
-
+            //converts html to canvas
             const canvas = await html2canvas(portfolio, {
                 allowTaint: true,
                 useCORS: true,
@@ -147,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 logging: false //for a clean console
             });
 
-            //Coverting image to pdf
+            //adds canvas to PDF and save
             doc.addImage(
                 canvas.toDataURL('image/png'),//converting image to 64bit
                 'PNG', //setting image type
@@ -167,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
+//download button handler
     downloadButton.addEventListener('click', () => {
         // Collecting form data again when the download button is clicked
         const formData = new FormData(form);
