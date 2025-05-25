@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('template3form');
+    const form = document.getElementById('template4form');
     const imageInput = document.getElementById('profileImageInput')
-    const portfolioPreview = document.getElementById('portfolioPreview');
-    const downloadButton = document.getElementById('downloadButton')
+     const portfolioPreview = document.getElementById('portfolioPreview');
+    const downloadButton = document.getElementById('downloadButton');
+
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-
+//Form Submission Handler
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
-
+//Portfolio Preview Generation
     function generatePortfolioPreview(data, imageFile) {
         form.classList.add("hide");
         downloadButton.classList.remove('hide');
@@ -45,70 +46,77 @@ document.addEventListener('DOMContentLoaded', () => {
         const header = document.createElement('section');
         header.className = 'header';
         header.innerHTML = `
-            <div class="profile-image-section">
-            <img src=""class="image" alt="Profile Image">
-            </div>
-            <p class="name">${data.firstname} ${data.lastname}</p>
+        <div class="intro">
+            <p class"greetings">Hello!</p>
+            <p class="name">I'm <span>${data.firstname} ${data.lastname}</span></p>
             <p class="role">${data.role}</p>
-            <p class="status">Available for work</p>
+            <p class="role-summary">${data.aboutYourRole}</p>
+            <p class="work-status">Available to work</p>
+        </div>
+        <div class="profile-image-section">
+            <img src=""class="image" alt="Profile Image">
+         </div>
         `;
         portfolioPreview.appendChild(header);
 
-        //Creating the about section
-        const about = document.createElement('section');
-        about.className = 'about';
-        about.innerHTML = `
-            <h2>${data.role}</h2>
-            <p class="summary-one">
-            ${data.aboutYourRole}
-            </p>
-            <p class="summary-two">
-            ${data.aboutExperiences}
-            </p>
-        `;
-        portfolioPreview.appendChild(about);
 
         //Creating the experience section
         const exp = document.createElement('section');
         exp.className = 'experience';
         exp.innerHTML = `
-                <div class="exp-content">
-                        <div class="third exp">
+                <h2>Experience</h2>
+                <div class="exp-section">
+                        <div class="third exp1">
                             <div class="date">${data.jobFirstStartDate}-${data.jobFirstEndDate}</div>
-                            <div class="exp-summary">
-                                <p class="role">${data.jobFirstRole}</p>
-                                <p class="role-summary">${data.roleFirstSummary}</p>
+                            <div class="exp-role">
+                                <p class="title">${data.jobFirstRole}</p>
+                                <p class="exp-role-summary">${data.roleFirstSummary}</p>
                             </div>
                         </div>
-                        <div class="second exp">
+                        <div class="second exp2">
                             <div class="date">${data.jobSecondStartDate}-${data.jobSecondEndDate}</div>
-                            <div class="exp-summary">
-                                <p class="role">${data.jobSecondRole}</p>
-                                <p class="role-summary">${data.roleSecondSummary}</p>
+                            <div class="exp-role">
+                                <p class="title">${data.jobSecondRole}</p>
+                                <p class="exp-role-summary">${data.roleSecondSummary}</p>
                             </div>
                         </div>
-                        <div class="recent exp">
+                        <div class="recent exp3">
                             <div class="date">${data.jobThreeStartDate}-${data.jobThreeEndDate}</div>
-                            <div class="exp-summary">
-                                <p class="role">${data.jobThreeRole}</p>
-                                <p class="role-summary">${data.roleThreeSummary}</</p>
+                            <div class="exp-role">
+                                <p class="title">${data.jobThreeRole}</p>
+                                <p class="exp-role-summary">${data.roleThreeSummary}</</p>
                             </div>
                         </div>
                 </div>
-                <div class="exp-bg"></div>
         `;
         portfolioPreview.appendChild(exp);
 
-        //creating the contact contact section
+
+        //creating the skillset question
+        const skillset = document.createElement('section');
+        skillset.className = 'skillset';
+        skillset.innerHTML = `
+            <h2>MY SKILLSET</h2>
+            <div class="skilslist">
+                <h3>Skills/Tools</h3>
+                <ul>
+                    <li>${data.skillOne}</li>
+                    <li>${data.skillTwo}</li>
+                    <li>${data.skillThree}</li>
+                    <li>${data.skillFour}</li>
+                </ul>
+            </div>
+        `;
+        portfolioPreview.appendChild(skillset);
+
+
+        //creating the contact section
         const contact = document.createElement('section');
         contact.className = 'contact';
         contact.innerHTML = `
-            <p>Looking to upscale your business? let’s work together</p>
-            <p>To see more of my work, visit my socials</p>
-            <div class="contact-details">
-                <div class="mail"><img src="./images/Gmail.svg" alt="">${data.email}</div>
-                <div class="phone-number"><img src="./images/Ringing Phone.svg" alt="">${data.phone}</div>
-            </div>
+            <h2>Contact Me!</h2>
+            <p class="mail"><img src="./images/Email.svg" alt="">${data.email}</p>
+            <p class="phone-number"><img src="./images/Phone.svg" alt="">${data.phone}</p>
         `;
         portfolioPreview.appendChild(contact);
 
@@ -117,18 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(imageFile && imageFile.size > 0) {
             const reader = new FileReader();
             reader.onload = (e) => {
-                const headerImg = header.querySelector('.image');
-                const aboutImg = about.querySelector('.image');
-
-                if(headerImg){
-                    headerImg.src = e.target.result;
-                    headerImg.alt =  data.name ? `${data.name}'s Profile Image` : 'Profiles Image';
-                }
-
-                if(aboutImg){
-                    aboutImg.src = e.target.result;
-                    aboutImg.alt =  data.name ? `${data.name}'s Profile Image` : 'Profiles Image';
-                }
+                const img = header.querySelector('.image');
+                img.src = e.target.result;
+                img.alt = data.name ? `${data.name}'s Profile Image` : 'Profiles Image';
             };
             reader.readAsDataURL(imageFile);
         }

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font/css/all.css">
     <title>Portfolio Builder</title>
     <script defer src="./script.js"></script>
 </head>
 <body>
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero hide" id="hero">
         <nav>
             <div class="logo">
                 <p>PB</p>
             </div>
-            <div class="menu">
+            <div class="menu hide">
                 <ul>
                     <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -22,10 +23,30 @@
                     <li><a href="#company">Company</a></li>
                 </ul>
             </div>
-            <div class="contact-button">
+            <div class="contact-button hide">
                 <a href="#contact">Contact</a>
             </div>
+            <div class="menu-bar-btn hide" id="menu-bar-btn">
+                <i class="fa-solid fa-bars" style="color: #3B5785;"></i>
+            </div>
         </nav>
+    </section>
+
+    <section class="small-screen-menu hide" id="menu-bar-btn">
+            <div class="control-btns">
+            <div class="cancel-btn hide" id="cancel-btn">
+                <i class="fa-solid fa-x" style="color: #ffff;"></i>
+            </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#template">Template</a></li>
+                    <li><a href="#company">Company</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
     </section>
 
     <!-- HOME PAGE SECTION -->
@@ -191,7 +212,5 @@
                 </ul>
             </div>
           </footer>
-
-
 </body>
 </html>

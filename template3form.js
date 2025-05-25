@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const exp = document.createElement('section');
         exp.className = 'experience';
         exp.innerHTML = `
-                <div class="exp-content">
+                <div class="exp-content"> 
                         <div class="third exp">
                             <div class="date">${data.jobFirstStartDate}-${data.jobFirstEndDate}</div>
                             <div class="exp-summary">
@@ -80,22 +80,25 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p class="role-summary">${data.roleFirstSummary}</p>
                             </div>
                         </div>
+
                         <div class="second exp">
-                            <div class="date">${data.jobSecondStartDate}-${data.jobSecondEndDate}</div>
+                            <div class="date">${data.jobTwoStartDate}-${data.jobTwoEndDate}</div>
                             <div class="exp-summary">
-                                <p class="role">${data.jobSecondRole}</p>
-                                <p class="role-summary">${data.roleSecondSummary}</p>
+                                <p class="role">${data.jobTwoRole}</p>
+                                <p class="role-summary">${data.roleTwoSummary}</p>
                             </div>
                         </div>
+
                         <div class="recent exp">
                             <div class="date">${data.jobThreeStartDate}-${data.jobThreeEndDate}</div>
                             <div class="exp-summary">
                                 <p class="role">${data.jobThreeRole}</p>
-                                <p class="role-summary">${data.roleThreeSummary}</</p>
+                                <p class="role-summary">${data.roleThreeSummary}</p>
                             </div>
                         </div>
+                    <div class="exp-bg"></div>
                 </div>
-                <div class="exp-bg"></div>
+                
         `;
         portfolioPreview.appendChild(exp);
 

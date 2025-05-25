@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template 3</title>
+    <title>Template 4</title>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <link rel="stylesheet" href="./template3form.css">
+    <link rel="stylesheet" href="./template4form.css">
 </head>
 <body>
-    <form action="" id="template3form" class="template3form">
+    <form action="" id="template4form" class="template4form">
         <h1>Portfolio Form</h1>
-
+        
         <div class="profileImage">
             <label for="profileImage">Profile Image:</label> <br>
             <input name="profileImage" type="file" id="profileImageInput" accept="image*/" required><br>
@@ -29,34 +29,31 @@
         <label for="about">Summary About Your Role:</label>
         <textarea name="aboutYourRole" id="aboutYourRole" minlength="" maxlength="" required></textarea>
 
-        <label for="about">Summary About Your Experiences:</label>
-        <textarea name="aboutExperiences" id="aboutExperiences" minlength="" maxlength="" required></textarea>
-
         <h2>Experience 1</h2>
-        <label for="">Start Date/Year:</label>
-        <input name="" type="number" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+        <label for="jobFirstStartDate">Start Date/Year:</label>
+        <input name="jobFirstStartDate" type="number" id="jobFirstStartDate" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
 
-        <label for="">End Date/Year:</label>
-        <input name="" type="num" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+        <label for="jobFirstEndDate">End Date/Year:</label>
+        <input name="jobFirstEndDate" type="num" id="jobFirstEndDate" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
 
-        <label for="">Job Role:</label>
-        <input name="" type="text" id="" required>
+        <label for="jobFirstRole">Job Role:</label>
+        <input name="jobFirstRole" type="text" id="jobFirstRole" required>
 
-        <label for="">Role experience summary:</label>
-        <textarea name="" id="" minlength="" maxlength="" required></textarea>
+        <label for="roleFirstSummary">Role experience summary:</label>
+        <textarea name="roleFirstSummary" id="roleFirstSummary" minlength="" maxlength="" required></textarea>
 
         <h2>Experience 2</h2>
-        <label for="">Start Date/Year:</label>
-        <input name="" type="number" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+        <label for="jobSecondStartDate">Start Date/Year:</label>
+        <input name="jobSecondStartDate" type="number" id="jobSecondStartDate" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
 
-        <label for="">End Date/Year:</label>
-        <input name="" type="num" id="" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
+        <label for="jobSecondEndDate">End Date/Year:</label>
+        <input name="jobSecondEndDate" type="num" id="jobSecondEndDate" placeholder="Please write in this format (2023-2025 or 2023 till present)" required>
 
-        <label for="">Job Role:</label>
-        <input name="" type="text" id="" required>
+        <label for="jobSecondRole">Job Role:</label>
+        <input name="jobSecondRole" type="text" id="jobSecondRole" required>
 
-        <label for="">Role experience summary:</label>
-        <textarea name="" id="" minlength="" maxlength="" required></textarea>
+        <label for="roleSecondSummary">Role experience summary:</label>
+        <textarea name="roleSecondSummary" id="roleSecondSummary" minlength="" maxlength="" required></textarea>
 
         <h2>Experience 3</h2>
         <label for="jobThreeStartDate">Start Date/Year:</label>
@@ -72,6 +69,20 @@
         <textarea name="roleThreeSummary" id="roleThreeSummary" minlength="" maxlength="" required></textarea>
 
 
+        <h2>YOUR TOP FOUR(4) SKILLS</h2>
+        <label for="skillOne">SKILL 1:</label>
+        <input name="skillOne" id="skillOne" type="text" required>
+
+        <label for="skillTwo">SKILL 2:</label>
+        <input name="skillTwo" id="skillTwo" type="text" required>
+
+        <label for="skillThree">SKILL 3:</label>
+        <input name="skillThree" id="skillThree" type="text" required>
+
+        <label for="skillFour">SKILL 4:</label>
+        <input name="skillFour" id="skillFour" type="text" required>
+
+        <h2>CONTACT DETAILS</h2>
         <label for="email">Email:</label>
         <input name="email" type="email" id="email" required>
 
@@ -85,5 +96,5 @@
 <div class="porfolio-container hide" id="portfolioPreview"></div>
 <button id="downloadButton" class="download-btn hide">Download PDF</button>
 </body>
-<script src="./template3form.js"></script>
+<script src="./template4form.js"></script>
 </html>

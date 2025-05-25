@@ -159,9 +159,9 @@ form button:hover{
     margin-bottom: 1rem;
 }
 .experience{
+    position: relative;
     max-width: 850px;
     height: auto;
-    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -169,15 +169,16 @@ form button:hover{
 .experience .exp-content{
     width: 100%;
     height: auto;
-    position: absolute;
+    z-index: 2;
+    position: relative;
 }
-.experience .exp-content .third{
-    background-color: var(--blue);
+.experience .third{
+    background-color: var(--blue);  
 }
-.experience .exp-content .second{
+.experience .second{
     background-color: var(--white);
 }
-.experience .exp-content .recent{
+.experience .recent{
     background-color: var(--blue);
 }
 .experience .exp{
@@ -204,9 +205,15 @@ form button:hover{
     line-height: 1.5rem;
 }
 .experience .exp-bg{
-    width: 20%;
-    height: 850px;
-    border: 5px solid black;
+    width: 10%;
+    height: 775px;
+    position: absolute;
+    border: 4px solid var(--black);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin-top: 2%;
+    margin-left: 2.5%;
 }
 .contact{
     margin-top: 5%;

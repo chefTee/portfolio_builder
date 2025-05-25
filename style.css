@@ -79,7 +79,62 @@ nav .contact-button:hover{
     transition: transform ease-in-out .3s;
     transform: scale(1.05);
 }
+.menu-bar-btn{
+    font-size: 35px;
+}
+.menu-bar-btn.hide{
+    display: none;
+}
 
+.small-screen-menu{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* padding-top: 4rem; */
+    background-color: var(--deep-blue);
+}
+.small-screen-menu.hide{
+    display: none;
+}
+.small-screen-menu .control-btns{
+    display: flex;
+    justify-content: end;
+}
+.small-screen-menu .control-btns i{
+    font-size: 40px;
+}
+.small-screen-menu.hide .menu{
+    display: none;
+}
+.small-screen-menu .menu{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+.small-screen-menu .menu ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.small-screen-menu .menu ul li{
+    width: 100%;
+    border-bottom: 2px solid var(--white);
+}
+.small-screen-menu .menu ul li:last-child{
+    border-bottom: none;
+}
+.small-screen-menu .menu ul li a{
+    color: white;
+    font-size: 40px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 /* HOME PAGE SECTION */
 .home{
@@ -421,4 +476,35 @@ footer{
 }
 .social-section ul li:hover{
     transform: scale(1.05);
+}
+
+
+@media (max-width:1097px){
+.template-page{
+    max-width: 100%;
+    width: max-content;
+}
+.templates-container .template{
+    width: fit-content;
+}
+.template img{
+    width: min-content;
+}
+}
+@media (max-width: 820px){
+    .hero.hide{
+        display: none;
+    }
+    .menu.hide{
+        display: none;
+    }
+    .contact-button.hide{
+        display: none;
+    }
+    .menu-bar-btn.hide{
+    display: block;
+    }
+    .small-screen-menu.hide .menu{
+        display: block;
+}
 }

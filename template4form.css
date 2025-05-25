@@ -16,14 +16,17 @@ textarea{
     font: inherit;
 }
 :root{
-    --white:#FFFFFF;
-    --blue: #E1F4F6;
+     --white:#F1F1F1;
+    --green: #124037;
+    --light-green: #c6f7ed;
     --black: #000000;
+    --grey: #D9D9D9;
+    --yellow: #FDAD16;
 }
 body{
     min-height: 100vh;
     max-width: 100%;
-    background-color:  #E1F4F6;
+    background-color: var(--light-green);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,25 +35,25 @@ form{
     height: auto;
     padding: 2rem;
     border-radius: 1rem;
-    border:2px solid #91dfe8;
+    border:2px solid var(--green);
     width: 50%;
     margin: 0 auto;
     margin-top: 2rem;
-    background-color: var(--white);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 form h1{
     text-transform: uppercase;
-    color: #91dfe8;
+    color: var(--green);
     text-align: center;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 form input{
     margin-bottom: .5rem;
-    border: 1px solid #91dfe8;
+    border: 1px solid var(--light-green);
     border-radius: 5px;
     padding: 10px;
 }
@@ -58,29 +61,29 @@ form textarea{
     resize: none;
     range: 10;
     margin-bottom: .5rem;
-    border: 1px solid #91dfe8;
+    border: 1px solid var(--light-green);
     border-radius: 5px;
     padding: 10px;
 }
 form input:focus,
 form textarea:focus{
     border: none;
-    outline: 2px solid #76d8e3;
+    outline: 2px solid var(--green);
 }
 form button{
     text-transform: uppercase;
     font-size: 1em;
     font-weight: bold;
     padding: .5rem;
-    background-color: #91dfe8;
+    background-color: var(--light-green);
     border: none;
     border-radius: 5px;
 }
 form button:hover{
-    background-color: #76d8e3;
+    background-color: var(--green);
 }
 .download-btn{
-    color: #91dfe8;
+    color: var(--light-green);
     margin: 2% auto;
     width: fit-content;
     text-transform: uppercase;
@@ -92,7 +95,7 @@ form button:hover{
     border-radius: 5px;
 }
 .download-btn:hover{
-    color: #76d8e3;
+    color: var(--green);
 }
 .porfolio-container.hide{
     display: none;
@@ -102,142 +105,160 @@ form button:hover{
     max-width: 850px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: #bfe6ea;
+    background-color: var(--light-green);
     box-shadow: 0 0 15px var(--blue);
 }
-.template3form.hide{
+.template4form.hide{
     display: none;
 }
 .header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--blue);
-    padding-block: 4rem;
-}
-.header .profile-image-section{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    margin-bottom: 1rem;
-}
-.profile-image-section img{
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-}
-.header .name{
-    font-weight: bolder;
-    font-size: 30px;
-    margin-bottom: .5rem;
-}
-.header .role{
-    font-size: 20px;
-    margin-bottom: .5rem;
-}
-.header .status{
-    margin-top: .5rem;
-    background-color: var(--black);
-    padding: 6px 1.5rem;
-    color: var(--white);
-    border-radius: 15px;
-}
-.about{
-    margin: 1rem 1rem;
-    background-color: var(--blue);
-    padding: 3rem 1rem;
-}
-.about h2{
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
-}
-.about p{
-    font-size: 18px;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
-}
-.experience{
-    max-width: 850px;
-    height: auto;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.experience .exp-content{
-    width: 100%;
-    height: auto;
-    position: absolute;
-}
-.experience .exp-content .third{
-    background-color: var(--blue);
-}
-.experience .exp-content .second{
+    padding: 4rem 2rem;
     background-color: var(--white);
 }
-.experience .exp-content .recent{
-    background-color: var(--blue);
+.header .intro{
+    width: 60%;
 }
-.experience .exp{
-    padding-block: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    align-items: start;
-    width: 92%;
-    margin: 0 auto;
+.header .greetings{
+    color: var(--black);
+    font-size: 25px;
 }
-.experience .exp .date{
-    width: 100%;
-    margin-right: 5px;
-    font-weight: bold;
+.header .name{
+    color: var(--green);
+    font-weight: 400;
+    font-size: 35px;
+}
+.header .name span{
+    text-decoration: underline 3px solid var(--yellow);
+}
+.header .role{
+    color: var(--yellow);
+    font-weight: 400;
+    font-size: 35px;
+}
+.header .role-summary{
     font-size: 18px;
+    width: 90%;
+    margin-bottom: 2%;
 }
-.experience .exp .exp-summary .role{
-    font-size: 18px;
+.header .work-status{
+    width: fit-content;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.header .profile-image-section{
+    width: 40%;
+    height: 100%;
+}
+.header .profile-image-section img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px dotted var(--green);
+}
+
+.experience{
+    max-width: 100%;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 2.5rem 4rem;
+}
+.experience h2{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.experience .exp-section{
+    margin-top: 2.5rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 2rem;
+    font-size: 15px;
+}
+.experience .exp-section .date,
+.experience .exp-section .exp-role .title{
     font-weight: bold;
     margin-bottom: 1%;
 }
-.experience .exp .exp-summary .role-summary{
-    line-height: 1.5rem;
+.experience .exp-section .exp-role-summary{
+    line-height: 1.4rem;
 }
-.experience .exp-bg{
-    width: 20%;
-    height: 850px;
-    border: 5px solid black;
+.exp-section .exp1{
+    grid-column: 1 / 2;
+}
+.exp-section .exp3{
+    grid-column: 2 / 3;
+}
+.exp-section .exp3{
+    grid-column: 1 / 3;
+    width: 50%;
+    justify-self: center;
+}
+.skillset{
+    padding: 1.5rem 4rem;
+    background-color: var(--white);
+}
+.skillset h2{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--yellow);
+    margin-bottom: 4%;
+}
+.skillset .skilslist{
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: var(--grey);
+}
+.skillset .skilslist h3{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: var(--black);
+    margin-bottom: .5%;
+    text-transform: uppercase;
+}
+.skillset .skilslist ul li{
+    list-style-type: circle;
+    font-size: 18px;
 }
 .contact{
-    margin-top: 5%;
-    background-color: var(--blue);
-    padding: 3rem 2.5rem;
+    max-width: 100%;
+    background-color: var(--green);
+    padding: 1.5rem 4rem;
+    color: var(--white);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 2.5%;
+    text-transform: uppercase;
 }
 .contact p{
-    font-size: 16px;
-    margin-bottom: 1%;
-}
-.contact .contact-details{
-    display: flex;
-    gap: 3rem;
-    padding-bottom: 1.5rem;
-}
-.contact-details .mail{
+    font-size: 20px;
     display: flex;
     align-items: center;
+    margin-bottom: 3%;
+
 }
-.contact-details .mail img{
-    width: 25px;
-    margin-right: 5px;
+.contact p img{
+    width: 20px;
+    margin-right: 3%;
 }
-.contact-details .phone-number{
-    display: flex;
-    align-items: center;
-}
-.contact-details .phone-number img{
-    width: 25px;
-    margin-right: 5px;
-}
+
+
  
