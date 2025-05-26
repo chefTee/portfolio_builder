@@ -22,7 +22,7 @@ menuButton.addEventListener('click', () => {
 
 cancelButton.addEventListener('click', () => {
   hero.classList.remove('hide');
-  smallScreen.classList.remove('hide');
+  smallScreen.classList.add('hide');
 });
 
 
