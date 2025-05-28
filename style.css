@@ -549,6 +549,10 @@ footer{
     font-size: 14px;
     line-height: 1.2rem;
 }
+.template-buttons a{
+    font-size: 15px;
+    padding: 5px 15px;
+}
 .company-vision-container .vision{
     width: 90%;
     font-size: 25px;
@@ -636,6 +640,10 @@ footer{
 .template img{
     max-width: 100%;
     width: min-content;
+}
+.template-buttons a{
+    font-size: 20px;
+    padding: 10px 20px;
 }
 
 .company{
@@ -744,6 +752,10 @@ textarea{
     font-size: 15px;
     line-height: 1.4rem;
 }
+.template-buttons a{
+    font-size: 15px;
+    padding: 5px 13px;
+}
 .company-vision-container .vision{
     width: 95%;
     font-size: 18px;
@@ -805,6 +817,27 @@ footer{
 }
 .social-section ul li a{
     font-size: 15px;
+}
+}
+@media (max-width: 285px){
+.home-page-content .sub-title{
+    font-size: 25px;
+}
+.home-page-content .main-title{
+    font-size: 28px;
+}
+.about-page-content-container .summary{
+    font-size: 12px;
+    line-height: 1.2rem;
+}
+.template-buttons a{
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.company-vision-container .vision{
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.2rem;
 }
 }
 

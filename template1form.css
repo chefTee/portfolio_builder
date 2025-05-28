@@ -27,7 +27,7 @@ form{
     height: auto;
     padding: 2rem;
     border-radius: 1rem;
-    width: 50%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 2rem;
     background-color: white;
@@ -43,6 +43,7 @@ form h1{
     margin-bottom: 1rem;
 }
 form input{
+    max-width: 100%;
     margin-bottom: .5rem;
     border: 1px solid #80CABC;
     border-radius: 5px;
@@ -204,3 +205,24 @@ section p{
 .contact .details .contactTitle{
     font-weight: bold;
 }
+@media (max-width:375px) {
+    form h1{
+    font-size: 25px;
+    font-weight: 700;
+    }
+}
+@media (max-width:330px){
+    form h1{
+    font-size: 19px;
+    font-weight: 700;
+    }
+    form label{
+        font-size: 15px;
+    }
+}
+@media (max-width: 285px){
+    form button{
+    font-size: .8em;
+}
+}
+    

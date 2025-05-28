@@ -36,7 +36,7 @@ form{
     padding: 2rem;
     border-radius: 1rem;
     border:2px solid var(--green);
-    width: 50%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 2rem;
     background-color: white;
@@ -51,7 +51,8 @@ form h1{
     font-weight: 700;
     margin-bottom: 1rem;
 }
-form input{
+form input{ 
+    max-width: 100%;
     margin-bottom: .5rem;
     border: 1px solid var(--light-green);
     border-radius: 5px;
@@ -259,6 +260,34 @@ form button:hover{
     width: 20px;
     margin-right: 3%;
 }
-
+@media (max-width: 410px){
+   form h2{
+    font-size: 1.2em;
+    margin-bottom: 2%;
+   }
+   form .title{
+    text-align: center;
+   }
+}
+@media (max-width:375px) {
+    form h1{
+    font-size: 25px;
+    font-weight: 700;
+    }
+}
+@media (max-width:330px){
+    form h1{
+    font-size: 19px;
+    font-weight: 700;
+    }
+    form label{
+        font-size: 15px;
+    }
+}
+@media (max-width: 285px){
+    form button{
+    font-size: .8em;
+}
+}
 
  

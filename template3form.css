@@ -33,7 +33,7 @@ form{
     padding: 2rem;
     border-radius: 1rem;
     border:2px solid #91dfe8;
-    width: 50%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 2rem;
     background-color: var(--white);
@@ -49,6 +49,7 @@ form h1{
     margin-bottom: 1rem;
 }
 form input{
+    max-width: 100%;
     margin-bottom: .5rem;
     border: 1px solid #91dfe8;
     border-radius: 5px;
@@ -246,5 +247,25 @@ form button:hover{
 .contact-details .phone-number img{
     width: 25px;
     margin-right: 5px;
+}
+@media (max-width:375px) {
+    form h1{
+    font-size: 25px;
+    font-weight: 700;
+    }
+}
+@media (max-width:330px){
+    form h1{
+    font-size: 19px;
+    font-weight: 700;
+    }
+    form label{
+        font-size: 15px;
+    }
+}
+@media (max-width: 285px){
+    form button{
+    font-size: .8em;
+}
 }
  
