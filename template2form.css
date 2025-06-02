@@ -99,10 +99,14 @@ form button:hover{
 .porfolio-container{
     font-family: "Roboto Slab", serif;
     max-width: 850px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
     background-color: #fff;
     box-shadow: 0 0 15px var(--orange);
+
 }
 .template2form.hide{
     display: none;
@@ -153,11 +157,14 @@ form button:hover{
     align-content: stretch;
     justify-content: center;
     object-fit: cover;
+    background-color: var(--black);
 }
 .profile-content img{
     width: 100%;
     max-height: 100%;
-    object-fit: center;
+    display: block;
+    object-fit: cover;
+    /* object-position: 100% 100%; */
 }
 
 .temptwo-details-section{

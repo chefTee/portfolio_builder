@@ -166,15 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 'PNG', //setting image type
                 5,
                 5,
-                590,
-                650
+                580,
+                720
             );
 
             doc.save(`${data.name}.pdf`);
 
         } catch (error) {
             console.error('Error generating porfolio PDF:', error);
-            alert('Failed to generate PDF. Please try again.')
+            alert('Failed to generate PDF. Please try again.');
         }
 
 

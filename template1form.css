@@ -111,13 +111,10 @@ header{
 }
 header .image{
     width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     object-fit: cover;
+    object-position: 100% 40%;
     border-radius: 20px 0px 0px 20px;
-
-
 }
 header .intro{
     width: 70%;

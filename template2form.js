@@ -156,16 +156,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             //Coverting image to pdf
+                     const pageWidth = doc.internal.pageSize.getWidth();
+                    const imageWidth = 580;
+                    const imageHeight = 655;
+                    const x = (pageWidth - imageWidth) / 2;
             doc.addImage(
+
                 canvas.toDataURL('image/png'),//converting image to 64bit
                 'PNG', //setting image type
+                x,
                 5,
-                5,
-                590,
-                650
+                imageWidth,
+                imageHeight
             );
 
-            doc.save(`${data.name}.pdf`);
+            doc.save(`${data.firstname} ${data.lastname}.pdf`);
 
         } catch (error) {
             console.error('Error generating porfolio PDF:', error);

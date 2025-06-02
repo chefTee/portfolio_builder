@@ -106,7 +106,6 @@ form button:hover{
     max-width: 850px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: var(--light-green);
     box-shadow: 0 0 15px var(--blue);
 }
 .template4form.hide{
@@ -157,6 +156,7 @@ form button:hover{
 .header .profile-image-section img{
     width: 250px;
     height: 250px;
+    object-fit: cover;
     border-radius: 50%;
     border: 4px dotted var(--green);
 }
