@@ -2,7 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('template3form');
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
-    const downloadButton = document.getElementById('downloadButton')
+    const downloadButton = document.getElementById('downloadButton');
+    if (window.innerWidth >= 700){
+            downloadButton.style.display = 'block';
+    }else{
+            alert('PDF generation is only allowed on desktop for the best experience.');
+            downloadButton.style.display = 'none';
+            history.back();
+    }
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
