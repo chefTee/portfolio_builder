@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }else{
             alert('PDF generation is only allowed on desktop for the best experience.');
             downloadButton.style.display = 'none';
+            location.reload();
     }
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
