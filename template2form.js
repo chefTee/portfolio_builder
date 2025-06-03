@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
     const downloadButton = document.getElementById('downloadButton')
+    if (window.innerWidth >= 700){
+            downloadButton.style.display = 'block';
+    }else{
+            alert('PDF generation is only allowed on desktop for the best experience.');
+            downloadButton.style.display = 'none';
+    }
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
@@ -183,12 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     downloadButton.addEventListener('click', () => {
 
-        if (window.innerWidth >= 700){
-            downloadButton.style.display = 'block';
-        }else{
-            alert('PDF generation is only allowed on desktop for the best experience.');
-            downloadButton.style.display = 'none';
-        }
         // Collecting form data again when the download button is clicked
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
