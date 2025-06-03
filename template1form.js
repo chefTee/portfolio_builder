@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
     const downloadButton = document.getElementById('downloadButton');
+    const generatePortfolioButton = document.getElementById('generatePortfolio');
 
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
@@ -171,17 +172,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     }
+    generatePortfolioButton.addEventListener('click', () => {
+        if (window.innerWidth >= 700){
+            generatePortfolioButton.style.display = 'block';
+            }else{
+            alert('PDF generation is only allowed on desktop for the best experience.');
+            history.back();
+            }
+    })
+
 
 //download button handler
     downloadButton.addEventListener('click', () => {
-            if (window.innerWidth >= 700){
-            downloadButton.style.display = 'block';
-            }else{
-            downloadButton.style.display = 'none';
-            alert('PDF generation is only allowed on desktop for the best experience.');
-            downloadButton.style.display = 'none';
-            history.back();
-            }
         // Collecting form data again when the download button is clicked
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
