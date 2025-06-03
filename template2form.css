@@ -239,24 +239,6 @@ form button:hover{
 .temptwo-stats-section div .spec{
     font-size: 15px;
 }
-#portfolioPreview {
-    width: 420px;
-    height: 595px;
-    max-width: 100%;
-}
-@media (max-width: 768px) {
-    #portfolioPreview {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    #portfolioPreview img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 @media (max-width:375px) {
     form h1{
     font-size: 25px;
