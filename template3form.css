@@ -133,11 +133,13 @@ form button:hover{
     border-radius: 100%;
 }
 .header .name{
+    text-transform: capitalize;
     font-weight: bolder;
     font-size: 30px;
     margin-bottom: .5rem;
 }
 .header .role{
+    text-transform: capitalize;
     font-size: 20px;
     margin-bottom: .5rem;
 }
@@ -165,7 +167,6 @@ form button:hover{
 }
 .experience{
     position: relative;
-    max-width: 850px;
     height: auto;
     width: 100%;
     display: flex;
@@ -197,7 +198,6 @@ form button:hover{
 }
 .experience .exp .date{
     width: 100%;
-    margin-right: 5px;
     font-weight: bold;
     font-size: 18px;
 }
@@ -205,20 +205,10 @@ form button:hover{
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 1%;
+    text-transform: capitalize;
 }
 .experience .exp .exp-summary .role-summary{
     line-height: 1.5rem;
-}
-.experience .exp-bg{
-    width: 10%;
-    height: 775px;
-    position: absolute;
-    border: 4px solid var(--black);
-    z-index: -1;
-    top: 0;
-    left: 0;
-    margin-top: 2%;
-    margin-left: 2.5%;
 }
 .contact{
     margin-top: 5%;

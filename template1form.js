@@ -151,13 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             //adds canvas to PDF and save
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const pageHeight = doc.internal.pageSize.getHeight();
             doc.addImage(
                 canvas.toDataURL('image/png'),//converting image to 64bit
                 'PNG', //setting image type
                 5,
                 5,
-                590,
-                650
+                pageWidth - 10,
+                pageHeight - 10
             );
 
             doc.save(`${data.name}.pdf`);

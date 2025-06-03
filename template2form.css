@@ -135,11 +135,15 @@ form button:hover{
     line-height: 4rem;
     font-weight: 600;
     letter-spacing: 6px;
+    text-transform: capitalize;
 }
 .intro-content h1 span{
     font-weight: 300;
     font-size: 30px;
     letter-spacing: 5px;
+}
+.intro-content p{
+    text-transform: capitalize;
 }
 .intro-content button{
     width: fit-content;

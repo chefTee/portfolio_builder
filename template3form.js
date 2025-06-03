@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p class="role-summary">${data.roleThreeSummary}</p>
                             </div>
                         </div>
-                    <div class="exp-bg"></div>
                 </div>
                 
         `;
@@ -165,16 +164,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             //Coverting image to pdf
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const pageWidth = doc.internal.pageSize.getWidth(); 
             doc.addImage(
                 canvas.toDataURL('image/png'),//converting image to 64bit
                 'PNG', //setting image type
                 5,
                 5,
-                590,
-                650
+                pageWidth - 10,
+                pageHeight - 10
             );
 
-            doc.save(`${data.name}.pdf`);
+            doc.save(`${data.firstname} ${data.lastname}.pdf`);
 
         } catch (error) {
             console.error('Error generating porfolio PDF:', error);

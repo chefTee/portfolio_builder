@@ -96,7 +96,7 @@ form button:hover{
     font-family: "Roboto Slab", serif;
     max-width: 850px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 8px;
     background-color: #fff;
     box-shadow: 0 0 15px #80CABC;
 }
@@ -122,7 +122,7 @@ header .intro{
     color: #000;
     background-color: #80CABC;
     padding: 1rem;
-    line-height: 2rem;
+    line-height: 1.9rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,6 +131,7 @@ header .intro{
 header .intro .name{
     font-size: 25px;
     font-weight: bolder;
+    text-transform: capitalize;
 }
 header .intro .role span{
     font-size: 25px;
@@ -138,7 +139,7 @@ header .intro .role span{
 }
 header .intro .summary{
     width: 65%;
-    line-height: 1.6rem;
+    line-height: 1.5rem;
 }
 
 section{
@@ -158,14 +159,15 @@ section h2{
     margin-bottom: 2%;
 }
 section p{
-    line-height: 2rem;
+    line-height: 1.8rem;
     font-size: 20px;
     font-weight: normal;
 } 
 .skill-section ul li{
     font-size: 20px;
-    line-height: 2rem;
+    line-height: 1.8rem;
     list-style-type: disc;
+    text-transform: capitalize;
 }
 
 .expsection{
@@ -182,7 +184,7 @@ section p{
     margin-bottom: 2%;
 }
 .expsection p{
-    line-height: 2rem;
+    line-height: 1.8rem;
     font-size: 20px;
     font-weight: normal;
 }
