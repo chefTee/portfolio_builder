@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.innerWidth >= 700){
             downloadButton.style.display = 'block';
             }else{
+            downloadButton.style.display = 'none';
             alert('PDF generation is only allowed on desktop for the best experience.');
             downloadButton.style.display = 'none';
             history.back();
