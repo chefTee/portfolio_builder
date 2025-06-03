@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //coverting the html to pdf
     async function generatePDF(data){
         const { jsPDF } = window.jspdf;
-        const doc = new jsPDF('p', 'pt', 'a4');
+        const doc = new jsPDF('p', 'pt', 'a5');
         //while the document is downloading
         const portfolio = document.getElementById('portfolioPreview');
 
@@ -151,12 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const canvas = await html2canvas(portfolio, {
                 allowTaint: true,
                 useCORS: true,
-                scale: 4,
+                scale: window.devicePixelRatio || 2,
                 logging: false //for a clean console
             });
 
             //Coverting image to pdf
-                     const pageWidth = doc.internal.pageSize.getWidth();
+                    const pageWidth = doc.internal.pageSize.getWidth();
                     const imageWidth = 580;
                     const imageHeight = 655;
                     const x = (pageWidth - imageWidth) / 2;
