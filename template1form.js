@@ -4,7 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('profileImageInput')
     const portfolioPreview = document.getElementById('portfolioPreview');
     const downloadButton = document.getElementById('downloadButton');
-    const generatePortfolioButton = document.getElementById('generatePortfolio');
+    if (window.innerWidth >= 700){
+            downloadButton.style.display = 'block';
+    }else{
+            alert('PDF generation is only allowed on desktop for the best experience.');
+            downloadButton.style.display = 'none';
+            history.back();
+    }
 
     //Getting the preview of the image
     imageInput.addEventListener('change', (e) => {
@@ -105,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="contactTitle">Email:</p>
             <p>${data.email}</p>
             </div>
-            </div>
+            </div>            
 
         `;
 
@@ -172,14 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     }
-    generatePortfolioButton.addEventListener('click', () => {
-        if (window.innerWidth >= 700){
-            generatePortfolioButton.style.display = 'block';
-            }else{
-            alert('PDF generation is only allowed on desktop for the best experience.');
-            history.back();
-            }
-    })
 
 
 //download button handler
